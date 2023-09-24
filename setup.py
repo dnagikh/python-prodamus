@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 from distutils.core import setup
 
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 setup(
-    name='pyprodamus',
+    name='python-prodamus',
     version='1.0.1',
     maintainer="Daniil Nagikh",
     maintainer_email="dnagikh@gmail.com",
-    url="https://github.com/dnagikh/pyprodamus",
-    packages=['pyprodamus'],
+    url="https://github.com/dnagikh/python-prodamus",
+    packages=['python-prodamus'],
     install_requires=[],
     license='LICENSE.md',
     description='Prodamus hash verifier',
@@ -22,5 +26,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Security :: Cryptography",
         ],
-    long_description=open('README.md').read(),
+    long_description=long_description,
+    long_description_content_type='text/markdown',
 )

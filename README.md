@@ -1,4 +1,4 @@
-# Hashing Prodamus (HMAC)
+# Prodamus hash verifier (HMAC)
 
 Generate and verify Prodamus hash.
 
@@ -6,17 +6,13 @@ https://help.prodamus.ru/payform/integracii/rest-api/instrukcii-dlya-samostoyate
 
 ## Installation
     
-    pip install pyprodamus
-
-or:
-
-    pip install git+git://github.com/dnagikh/pyprodamus.git
+    pip install python-prodamus
 
 ## Usage
 
 Init object:
 
-    prodamus = pyprodamus.PyProdamus(API_TOKEN)
+    prodamus = python-prodamus.PyProdamus(API_TOKEN)
 
 Parse query string to a dictionary:
 
@@ -36,6 +32,8 @@ Verify signature:
 
 ## Copyright
 
-Copyright 2023 [Daniil Nagikh], all rights reserved.
+Copyright 2023 [Max Arnold, Daniil Nagikh], all rights reserved.
 
 This software is released under the MIT License.
+
+A huge thank to https://github.com/max-arnold
