@@ -1,7 +1,41 @@
-Python-интерпретация php-функции проверки подписи пришедшего запроса (Webhook) Prodamus (https://prodamus.ru)
+# Hashing Prodamus (HMAC)
 
-Для создания подписи формирования ссылки используйте `HmacProdamus.create`
+Generate and verify Prodamus hash.
 
-Для проверки подписи `HmacProdamus.verify`
+https://help.prodamus.ru/payform/integracii/rest-api/instrukcii-dlya-samostoyatelnaya-integracii-servisov#kak-prinyat-uvedomlenie-ob-uspeshnoi-oplate
 
-Исходная документация для самостоятельной интеграции сервисов: https://help.prodamus.ru/payform.ru-onlain-oplaty/integracii/rest-api/instrukcii-dlya-samostoyatelnaya-integracii-servisov#proverka-uspeshnoi-integracii
+## Installation
+    
+    pip install pyprodamus
+
+or:
+
+    pip install git+git://github.com/dnagikh/pyprodamus.git
+
+## Usage
+
+Init object:
+
+    prodamus = pyprodamus.PyProdamus(API_TOKEN)
+
+Parse query string to a dictionary:
+
+    bodyDict = prodamus.parse(body)
+
+Create signature:
+
+    checkSign = prodamus.sign(bodyDict)
+
+Verify signature:
+
+    signIsGood = prodamus.verify(bodyDict, receivedSign)
+    if signIsGood:
+        print("Signature is awesome")
+    else:
+        print("Signature is incorrect")
+
+## Copyright
+
+Copyright 2023 [Daniil Nagikh], all rights reserved.
+
+This software is released under the MIT License.
