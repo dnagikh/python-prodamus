@@ -7,7 +7,7 @@ import re
 from urllib.parse import parse_qsl
 
 
-class PyProdamus:
+class ProdamusPy:
     def __init__(self, secret):
         self.secret = secret
         
@@ -25,7 +25,6 @@ class PyProdamus:
     
     def parse(self, body: str):
         payload = dict(parse_qsl(body, keep_blank_values=True, strict_parsing=True, errors='strict'))
-        print(payload)
         payload_dict = self.__php2dict(payload)
 
         return payload_dict

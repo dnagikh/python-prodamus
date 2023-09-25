@@ -6,12 +6,12 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name='python-prodamus',
-    version='1.0.1',
+    name='prodamuspy',
+    version='1.0.2',
     maintainer="Daniil Nagikh",
     maintainer_email="dnagikh@gmail.com",
     url="https://github.com/dnagikh/python-prodamus",
-    packages=['python-prodamus'],
+    packages=['prodamuspy'],
     install_requires=[],
     license='LICENSE.md',
     description='Prodamus hash verifier',

@@ -6,13 +6,13 @@ https://help.prodamus.ru/payform/integracii/rest-api/instrukcii-dlya-samostoyate
 
 ## Installation
     
-    pip install python-prodamus
+    pip install prodamuspy
 
 ## Usage
 
 Init object:
 
-    prodamus = python-prodamus.PyProdamus(API_TOKEN)
+    prodamus = prodamuspy.PyProdamus(API_TOKEN)
 
 Parse query string to a dictionary:
 
